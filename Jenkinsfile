@@ -13,7 +13,7 @@ TF_ZIP = "jenkins-ec2.zip"
     stages {
         stage('Checkout Code') {
             steps {
-git url: 'https://github.com/pranjalM0408/hello-cicd.git'  // <-- apna GitHub username aur repo name daalo
+git url: 'https://github.com/pranjalM0408/hello-cicd.git', branch: 'main'  // <-- apna GitHub username aur repo name daalo
             }
         }
  
