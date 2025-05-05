@@ -21,7 +21,8 @@ git url: 'https://github.com/pranjalM0408/hello-cicd.git', branch: 'main'  // <-
             steps {
                 script {
                     sh """
-                    aws s3 cp s3://$TERRAFORM_S3_BUCKET/$TF_ZIP .
+                    wget
+                    https://pranjal-static-site-dev2025.s3.amazonaws.com/jenkins-ec2.zip
                     unzip -o $TF_ZIP -d jenkins-ec2.zip
                     """
                 }
