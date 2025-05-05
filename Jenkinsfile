@@ -18,16 +18,15 @@ git url: 'https://github.com/pranjalM0408/hello-cicd.git', branch: 'main'  // <-
         }
  
         stage('Download Terraform Code from S3') {
-            steps {
-                script {
-                    sh """
-                    wget
-                    https://pranjal-static-site-dev2025.s3.amazonaws.com/jenkins-ec2.zip
-                    unzip -o $TF_ZIP -d jenkins-ec2.zip
-                    """
-                }
-            }
+    steps {
+        script {
+            sh '''
+wget https://pranjal-static-site-dev2025.s3.amazonaws.com/jenkins-ec2.zip
+unzip jenkins-ec2.zip
+            '''
         }
+    }
+}
  
         stage('Run Terraform') {
             steps {
