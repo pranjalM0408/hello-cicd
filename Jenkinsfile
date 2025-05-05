@@ -22,7 +22,7 @@ git url: 'https://github.com/pranjalM0408/hello-cicd.git', branch: 'main'  // <-
                 script {
                     sh """
                     aws s3 cp s3://$TERRAFORM_S3_BUCKET/$TF_ZIP .
-                    unzip -o $TF_ZIP -d jenkins-ec2
+                    unzip -o $TF_ZIP -d jenkins-ec2.zip
                     """
                 }
             }
@@ -31,7 +31,7 @@ git url: 'https://github.com/pranjalM0408/hello-cicd.git', branch: 'main'  // <-
         stage('Run Terraform') {
             steps {
                 script {
-                    dir('jenkins-ec2') {
+                    dir('jenkins-ec2.zip') {
                         sh 'terraform init'
                         sh 'terraform apply -auto-approve'
                     }
