@@ -3,7 +3,7 @@ pipeline {
     environment {
 TERRAFORM_S3_BUCKET = "pranjal-static-site-dev2025" 
 TF_ZIP = "jenkins-ec2.zip"                   
-        AWS_REGION = "ap-south-1"
+        AWS_REGION = "us-east-1"
     }
  
     stages {
