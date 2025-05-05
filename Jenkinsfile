@@ -45,7 +45,7 @@ unzip -o terraform-code.zip -d tfdir
                         export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
                         export AWS_REGION=us-east-1
  
-                        aws s3 cp index.html s3://vilgax-host-bucket/index.html --acl public-read
+                        aws s3 cp index.html s3://vilgax-host-bucket/index.html 
                     '''
                 }
             }
