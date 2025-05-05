@@ -1,6 +1,10 @@
 pipeline {
     agent any
     environment {
+        
+        AWS_ACCESS_KEY_ID = credentials('aws-access-key')    // Replace with your Jenkins credential ID
+        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key') // Replace with your Jenkins credential ID
+    
 TERRAFORM_S3_BUCKET = "pranjal-static-site-dev2025" 
 TF_ZIP = "jenkins-ec2.zip"                   
         AWS_REGION = "us-east-1"
