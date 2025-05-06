@@ -16,7 +16,7 @@ git branch: 'main', url: 'https://github.com/pranjalM0408/hello-cicd.git'
                         export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
                         export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
                         export AWS_REGION=us-east-1
-aws s3 cp s3://vilgax24-bucket/terraform-code.zip .
+aws s3 cp s3://vilgax44-bucket/terraform-code.zip .
                     '''
                 }
             }
