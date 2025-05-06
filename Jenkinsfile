@@ -59,3 +59,4 @@ unzip -o terraform-code.zip -d tfdir
         }
     }
 }
+}
