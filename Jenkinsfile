@@ -49,6 +49,13 @@ unzip -o terraform-code.zip -d tfdir
                     '''
                 }
             }
+            stage('Show Static Website URL') {
+                steps {
+                    script {
+                        def websiteUrl = "http://vilgax-host-bucket.s3-website-us-east-1.amazonaws.com"
+                        echo "Your Static website is live at : ${websiteUrl}"
+                    }
+                }
         }
     }
 }
